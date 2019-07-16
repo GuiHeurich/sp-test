@@ -48,6 +48,7 @@ I want each line to show only the page visited
 As a data analyst
 so that I can organise my data
 I want to know the total number of visits to a page
+:production:
 
 As a data analyst
 so that I can organise my data

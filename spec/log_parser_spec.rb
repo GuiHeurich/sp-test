@@ -16,4 +16,16 @@ describe LogParser do
       end
     end
   end
+
+  # As a data analyst
+  # so that I can organise my data
+  # I want to know the total number of visits to a page
+  describe '#count_visits' do
+    context 'when given an array of visited pages' do
+      it 'returns an array with the page and its number of visits' do
+        log_parser.parse(file)
+        expect(log_parser.count_visits).to include("/help_page/1"=>80)
+      end
+    end
+  end
 end
