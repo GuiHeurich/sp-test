@@ -53,7 +53,11 @@ I want to know the total number of visits to a page
 As a data analyst
 so that I can organise my data
 I want to be able to separate normal views from unique views
+<<<<<<< HEAD
 :check:
+=======
+:production:
+>>>>>>> aefcbb61073c43efb793485cd042f34a4cc7a8dd
 
 As a data analyst
 so that I can organise my data
