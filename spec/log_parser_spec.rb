@@ -21,20 +21,18 @@ describe LogParser do
     context 'when given an array of visited pages' do
       it 'returns an array with the page and its number of visits' do
         log_parser.parse(file)
-        expect(log_parser.count_visits).to include("/help_page/1"=>80)
+        expect(log_parser.count_visits).to include("/help_page/1" => 80)
       end
     end
   end
 
-  # As a data analyst
-  # so that I can organise my data
-  # I want to be able to separate normal views from unique views
   describe '#find_unique' do
     context 'when given a hash of visits per page' do
-      it 'returns an array with unique page views' do
+      it 'selects keys that are strings with integers' do
         log_parser.parse(file)
         log_parser.count_visits
-        expect(log_parser.find_unique).to include("/about/2"=>90)
+        expect(log_parser.find_unique).to include("/about/2" => 90)
+        expect(log_parser.find_unique).not_to include("/home" => 78)
       end
     end
   end
