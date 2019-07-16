@@ -23,3 +23,29 @@ The input is a .log file and the output prints an ordered list of most visited w
 
 Edge cases:
 An empty file should throw an Error;
+
+## User stories
+
+As a data analyst
+so that I can organise data from a file
+I want to be able to extract individual lines from a log file
+
+As a data analyst
+so that I can organise data from a file
+I want to each line to show only the page visited
+
+As a data analyst
+so that I can organise data from a file
+I want to know the total number of visits to a page
+
+As a data analyst
+so that I can organise data from a file
+I want to be able to separate normal views from unique views
+
+As a data analyst
+so that I can organise data from a file
+I want to show a list of each page and how many times it was visited
+
+As a data analyst
+so that I can organise data from a file
+I want this list to be sorted in a descending order
