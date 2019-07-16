@@ -21,9 +21,8 @@ class LogParser
   end
 
   def find_unique
-    @unique_views = @visits_per_page.select { |key| key.count("0-9").positive? }
     @normal_views = @visits_per_page.select { |key| key.count("0-9").zero? }
-    @unique_views
+    @unique_views = @visits_per_page.select { |key| key.count("0-9").positive? }
   end
 
 end
