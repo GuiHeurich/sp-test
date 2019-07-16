@@ -37,15 +37,26 @@ describe LogParser do
     end
   end
 
-  # As a data analyst
-  # so that I can organise my data
-  # I want to be able to separate normal views from unique views
   describe '#find_unique' do
     context 'when given a hash of visits per page' do
       it 'returns an array with unique page views' do
         log_parser.parse(file)
         log_parser.count_visits
-        expect(log_parser.find_unique).to include("/about/2"=>90)
+        expect(log_parser.find_unique).to include("/about/2" => 90)
+      end
+    end
+  end
+
+  # As a data analyst
+  # so that I can organise my data
+  # I want my list of page views sorted in a descending order
+  describe '#sort' do
+    context 'when given an array of pages and number of visits' do
+      it 'sorts the array by visits in a descending order' do
+        log_parser.parse(file)
+        log_parser.count_visits
+        list = log_parser.find_unique
+        expect(log_parser.sort(list).min).to eq(["/about/2", 90])
       end
     end
   end

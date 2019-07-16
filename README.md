@@ -53,16 +53,13 @@ I want to know the total number of visits to a page
 As a data analyst
 so that I can organise my data
 I want to be able to separate normal views from unique views
-<<<<<<< HEAD
 :check:
-=======
+
+As a data analyst
+so that I can organise my data
+I want my list of page views sorted in a descending order
 :production:
->>>>>>> aefcbb61073c43efb793485cd042f34a4cc7a8dd
 
 As a data analyst
 so that I can organise my data
-I want to show a list of each page and how many times it was visited
-
-As a data analyst
-so that I can organise my data
-I want this list to be sorted in a descending order
+I want to print out this list

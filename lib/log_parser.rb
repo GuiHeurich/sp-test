@@ -25,4 +25,8 @@ class LogParser
     @unique_views = @visits_per_page.select { |key| key.count("0-9").positive? }
   end
 
+  def sort(list)
+    list.sort_by { |_pages, visits| visits }.reverse
+  end
+
 end
