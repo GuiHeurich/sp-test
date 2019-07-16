@@ -48,11 +48,12 @@ I want each line to show only the page visited
 As a data analyst
 so that I can organise my data
 I want to know the total number of visits to a page
-:production:
+:check:
 
 As a data analyst
 so that I can organise my data
 I want to be able to separate normal views from unique views
+:production:
 
 As a data analyst
 so that I can organise my data

@@ -1,8 +1,9 @@
 class LogParser
 
   def initialize
-    @pages = []
     @visits_per_page = {}
+    @unique_views = []
+    @normal_views = []
   end
 
   def parse(file)
@@ -14,13 +15,15 @@ class LogParser
 
   def count_visits
     @pages.map do |page|
-      if @visits_per_page.include?(page)
-        @visits_per_page[page] += 1
-      else
-        @visits_per_page[page] = 1
-      end
+      @visits_per_page.include?(page) ? @visits_per_page[page] += 1 : @visits_per_page[page] = 1
     end
     @visits_per_page
+  end
+
+  def find_unique
+    @unique_views = @visits_per_page.keep_if do
+      |key, value| key.count("0-9") > 0
+    end
   end
 
 end
