@@ -38,10 +38,12 @@ An empty file should throw an Error;
 As a data analyst
 so that I can organise my data
 I want to be able to extract individual lines from a log file
+:check:
 
 As a data analyst
 so that I can organise my data
-I want to each line to show only the page visited
+I want each line to show only the page visited
+:production:
 
 As a data analyst
 so that I can organise my data

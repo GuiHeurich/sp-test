@@ -1,9 +1,5 @@
 require 'log_parser'
 
-# As a data analyst
-# so that I can organise data from a file
-# I want to be able to extract individual lines from a log file
-
 describe LogParser do
   describe '#parse' do
     context 'when given a .log file' do
@@ -11,6 +7,15 @@ describe LogParser do
         log_parser = LogParser.new
         file = "./data/webserver.log"
         expect(log_parser.parse(file)).to be_an_instance_of(Array)
+      end
+
+      # As a data analyst
+      # so that I can organise my data
+      # I want each line to show only the page visited
+      it 'shows only the page name in each line' do
+        log_parser = LogParser.new
+        file = "./data/webserver.log"
+        expect(log_parser.parse(file)[0]).to eq("/help_page/1")
       end
     end
   end
