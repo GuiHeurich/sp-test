@@ -3,6 +3,15 @@
 A program that handles a log file from a webserver.
 It parses the data in the file and returns a list of the most visited pages.
 
+
+## Instructions
+
+Clone this repo and run ```bundle install```.
+Open IRB, type ```require 'app.rb'``` and then ```app.parse(<file>)``` replacing ```<file>``` with the path to the file you wish to be parsed.
+
+
+---
+
 ## Who is the user and what do they do
 
 The user handles large amounts of data stored in a file.
@@ -27,25 +36,25 @@ An empty file should throw an Error;
 ## User stories
 
 As a data analyst
-so that I can organise data from a file
+so that I can organise my data
 I want to be able to extract individual lines from a log file
 
 As a data analyst
-so that I can organise data from a file
+so that I can organise my data
 I want to each line to show only the page visited
 
 As a data analyst
-so that I can organise data from a file
+so that I can organise my data
 I want to know the total number of visits to a page
 
 As a data analyst
-so that I can organise data from a file
+so that I can organise my data
 I want to be able to separate normal views from unique views
 
 As a data analyst
-so that I can organise data from a file
+so that I can organise my data
 I want to show a list of each page and how many times it was visited
 
 As a data analyst
-so that I can organise data from a file
+so that I can organise my data
 I want this list to be sorted in a descending order
