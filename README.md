@@ -1,0 +1,25 @@
+# Log Parser
+
+A program that handles a log file from a webserver.
+It parses the data in the file and returns a list of the most visited pages.
+
+## Who is the user and what do they do
+
+The user handles large amounts of data stored in a file.
+The data registers all accesses to the server, listing page visits according to an IP.
+The user wants group the visits by page, count them, and return an ordered list.
+
+## What is the acceptance criteria
+
+app.parse(log_file) =
+  "/home 90 visits /index 80 visits..." &
+  "/about/2 8 unique views /index 5 unique views..."
+
+## What are the input and output types?
+
+The input is a .log file and the output prints an ordered list of most visited websites.
+
+## What are edge and naive cases?
+
+Edge cases:
+An empty file should throw an Error;
