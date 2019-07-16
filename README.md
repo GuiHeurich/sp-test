@@ -43,7 +43,7 @@ I want to be able to extract individual lines from a log file
 As a data analyst
 so that I can organise my data
 I want each line to show only the page visited
-:production:
+:check:
 
 As a data analyst
 so that I can organise my data
