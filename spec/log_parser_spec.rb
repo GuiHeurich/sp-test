@@ -44,7 +44,8 @@ describe LogParser do
         log_parser.parse
         log_parser.count_visits
         log_parser.find_unique
-        expect(log_parser.sort.min).to eq(["/about/2", 90])
+        expect(log_parser.sort[0]).to eq([["/contact", 89], ["/index", 82], ["/about", 81], ["/home", 78]])
+        expect(log_parser.sort[1]).to eq([["/about/2", 90], ["/help_page/1", 80]])
       end
     end
   end

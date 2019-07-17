@@ -1,6 +1,6 @@
 class LogParser
 
-  attr_reader :normal_views, :unique_views
+  attr_reader :visits_per_page
 
   def initialize(log_file_path)
     @log_file_path = log_file_path
@@ -27,8 +27,14 @@ class LogParser
   end
 
   def sort
-    @normal_views.sort_by { |_pages, visits| visits }.reverse
-    @unique_views.sort_by { |_pages, visits| visits }.reverse
+    @normal_views = @normal_views.sort_by { |_pages, visits| visits }.reverse
+    @unique_views = @unique_views.sort_by { |_pages, visits| visits }.reverse
+    merge
+  end
+
+private
+  def merge
+    @visits_per_page = [@normal_views] | [@unique_views]
   end
 
 end

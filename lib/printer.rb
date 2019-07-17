@@ -4,7 +4,7 @@ class Printer
     list_view = list.map do |page|
       "#{page[0]} #{page[1]} "
     end
-    list_view.join
+    puts list_view.join
   end
 
 end
