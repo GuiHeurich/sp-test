@@ -58,7 +58,7 @@ I want to be able to separate normal views from unique views
 As a data analyst
 so that I can organise my data
 I want my list of page views sorted in a descending order
-:production:
+:check:
 
 As a data analyst
 so that I can organise my data
