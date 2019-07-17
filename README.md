@@ -43,6 +43,7 @@ An empty file should throw an Error;
 
 ## User stories
 
+```
 As a data analyst
 so that I can organise my data
 I want to be able to extract individual lines from a log file
@@ -72,3 +73,4 @@ As a data analyst
 so that I can organise my data
 I want to print out this list
 :check:
+```
