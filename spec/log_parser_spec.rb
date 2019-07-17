@@ -37,7 +37,6 @@ describe LogParser do
     end
   end
 
-
   describe '#sort' do
     context 'when given an array of pages and number of visits' do
       it 'sorts the array by visits in a descending order' do
