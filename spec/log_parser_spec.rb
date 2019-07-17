@@ -47,16 +47,13 @@ describe LogParser do
     end
   end
 
-  # As a data analyst
-  # so that I can organise my data
-  # I want my list of page views sorted in a descending order
   describe '#sort' do
     context 'when given an array of pages and number of visits' do
       it 'sorts the array by visits in a descending order' do
         log_parser.parse(file)
         log_parser.count_visits
-        list = log_parser.find_unique
-        expect(log_parser.sort(list).min).to eq(["/about/2", 90])
+        log_parser.find_unique
+        expect(log_parser.sort.min).to eq(["/about/2", 90])
       end
     end
   end
