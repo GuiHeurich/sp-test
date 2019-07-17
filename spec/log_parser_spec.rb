@@ -20,8 +20,8 @@ describe LogParser do
   describe '#count_visits' do
     context 'when given an array of visited pages' do
       it 'returns an array with the page and its number of visits' do
-        log_parser.parse(file)
-        expect(log_parser.count_visits).to include("/help_page/1" => 80)
+        pages = log_parser.parse(file)
+        expect(log_parser.count_visits(pages)).to include("/help_page/1" => 80)
       end
     end
   end
@@ -29,20 +29,16 @@ describe LogParser do
   describe '#find_unique' do
     context 'when given a hash of visits per page' do
       it 'selects keys that are strings with integers' do
-        log_parser.parse(file)
-        log_parser.count_visits
-        expect(log_parser.find_unique).to include("/about/2" => 90)
-        expect(log_parser.find_unique).not_to include("/home" => 78)
-      end
-    end
-  end
-
-  describe '#find_unique' do
-    context 'when given a hash of visits per page' do
-      it 'returns an array with unique page views' do
-        log_parser.parse(file)
-        log_parser.count_visits
-        expect(log_parser.find_unique).to include("/about/2" => 90)
+        visits_per_page = {
+          "/help_page/1"=>80,
+          "/contact"=>89,
+          "/home"=>78,
+          "/about/2"=>90,
+          "/index"=>82,
+          "/about"=>81
+        }
+        expect(log_parser.find_unique(visits_per_page)).to include("/about/2" => 90)
+        expect(log_parser.find_unique(visits_per_page)).not_to include("/home" => 78)
       end
     end
   end
@@ -50,9 +46,15 @@ describe LogParser do
   describe '#sort' do
     context 'when given an array of pages and number of visits' do
       it 'sorts the array by visits in a descending order' do
-        log_parser.parse(file)
-        log_parser.count_visits
-        log_parser.find_unique
+        visits_per_page = {
+          "/help_page/1"=>80,
+          "/contact"=>89,
+          "/home"=>78,
+          "/about/2"=>90,
+          "/index"=>82,
+          "/about"=>81
+        }
+        log_parser.find_unique(visits_per_page)
         expect(log_parser.sort.min).to eq(["/about/2", 90])
       end
     end
