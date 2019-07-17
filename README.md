@@ -7,7 +7,15 @@ It parses the data in the file and returns a list of the most visited pages.
 ## Instructions
 
 Clone this repo and run ```bundle install```.
-Open IRB, type ```require 'app.rb'``` and then ```app.parse(<file>)``` replacing ```<file>``` with the path to the file you wish to be parsed.
+
+Open IRB, and type the following:
+
+```
+require 'app.rb'
+app = App.new
+app.parse(<file>)
+```
+Don't forget to replace ```<file>``` with the path to the file you wish to be parsed.
 
 
 ---
