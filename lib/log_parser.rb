@@ -8,6 +8,8 @@ class LogParser
   end
 
   def parse
+    raise "File empty. Upload valid file" if File.empty?(@log_file_path)
+    
     parsed_file = File.readlines @log_file_path
     @visited_pages = parsed_file.map do |line|
       line.split(" ")[0]

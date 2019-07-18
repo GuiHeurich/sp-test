@@ -17,6 +17,13 @@ app.parse(<file>)
 ```
 Don't forget to replace ```<file>``` with the path to the file you wish to be parsed.
 
+Example:
+
+```
+require 'app.rb'
+app = App.new
+app.parse('./data/webserver.log')
+```
 
 ---
 
@@ -28,9 +35,11 @@ The user wants group the visits by page, count them, and return an ordered list.
 
 ## What is the acceptance criteria
 
-app.parse(log_file) =
-  "/home 90 visits /index 80 visits..." &
-  "/about/2 8 unique views /index 5 unique views..."
+```
+>> app.parse(log_file) =
+>>  "/home 90 visits /index 80 visits"
+>>  "/about/2 8 unique views /index 5 unique views"
+```
 
 ## What are the input and output types?
 
@@ -38,8 +47,9 @@ The input is a .log file and the output prints an ordered list of most visited w
 
 ## What are edge and naive cases?
 
-Edge cases:
+Edge case:
 An empty file should throw an Error;
+:check:
 
 ## User stories
 
