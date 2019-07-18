@@ -25,6 +25,9 @@ app = App.new
 app.parse('./data/webserver.log')
 ```
 
+## Testing
+
+To test, type ```rspec```, and to check code formatting, please run ```rubocop```.
 ---
 
 ## Who is the user and what do they do
